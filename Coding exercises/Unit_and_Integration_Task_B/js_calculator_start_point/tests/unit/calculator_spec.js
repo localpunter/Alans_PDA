@@ -56,13 +56,13 @@ describe('calculator', function () {
     
     it('should clear the running total without affecting the calculation', function() {
     calculator.runningTotal = 5;
-    calculator.operatorClick('+');
+    calculator.operatorClick('*');
     calculator.numberClick(5);
     calculator.clearClick();
     calculator.numberClick(3);
     calculator.operatorClick('=');
     const actual = calculator.runningTotal;
-    assert.strictEqual(actual, 8);
+    assert.strictEqual(actual, 15);
     });
     
     
@@ -70,4 +70,4 @@ describe('calculator', function () {
     });
   
 
-});
+
